@@ -214,7 +214,7 @@ describe "GIT" do
 
   it "28. What is the syntax for deleting a branch called 'add-avatar' 
       on the remote 'origin' using the push and colon syntax?" do
-    answer = "?"
+    answer = ""
     encoded_answer = "7f9e982d2fe3ddabf95d835881a7efd6da387542"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -265,7 +265,7 @@ describe "GIT" do
      and one developer has pushed to your remote since you cloned it, 
      will 'git status' say you're ahead or behind (or both) origin/master?" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "?"
+    answer = "behind"
     encoded_answer = "d81d22fb57ad5589d12d6363f4160b33232c3510"
     expect(encode(answer)).to eq(encoded_answer)
   end
