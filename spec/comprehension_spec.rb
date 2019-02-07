@@ -7,21 +7,21 @@ describe "GIT" do
   end
 
   it "2. What is the syntax for staging all files, including new, modified, and deleted files?" do
-    answer = "?"
+    answer = "git add all"
     encoded_answers = ["e3ed0db138a439522bc6f0a56c71b2c90e3443db", "d43b64f144ca0689fea30adb6e5cb2150c971a0c", "1a1c76a81d0981b7fe181d7869d1ede4d1a2a24f"]
     expect(encode(answer)).to satisfy { |answer| encoded_answers.include?(answer) }
   end
 
   it "3. What is the syntax for committing all staged changes with the message 
       'update link styles'?" do
-    answer = "?"
+    answer = "git commit -m 'update link styles'"
     encoded_answer = "8d06e2760cda4755f387db0db0e6c425b2ece976"
     expect(encode(answer)).to eq(encoded_answer)
   end
 
   it "4. What command allows you to add all previously all tracked, modified files
       and create a message, 'add img to index' for the commit in one command?" do
-    answer = "?"
+    answer = ""
     encoded_answer = "00565151beeb1fa3682d6386399eaf87b788a5bc"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -30,7 +30,7 @@ describe "GIT" do
 # describe "PUSHING:" do
   it "5. From the master branch, what is the syntax for pushing the master branch 
       to the remote master branch where the remote is called 'origin'?" do
-    answer = "?"
+    answer = "git push origin"
     encoded_answer = "6c8e01a0360da3cf6e314c69c453957b70ab1b4e"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -207,7 +207,7 @@ describe "GIT" do
 # describe "DELETING BRANCHES:" do
   it "27. From master, what is the syntax for deleting a local branch called 
       'add-link'?" do
-    answer = "?"
+    answer = "git branch -d add-link"
     encoded_answer = "6f91ced397c25c02c099b56d71e11955ea660fa0"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -231,14 +231,14 @@ describe "GIT" do
 # describe "STATUS" do
   it "30. If index.html is being tracked and you modify it, but don't stage this change,
       what color will it be if you run 'git status'?" do
-    answer = "?"
+    answer = "red"
     encoded_answer = "78988010b890ce6f4d2136481f392787ec6d6106"
     expect(encode(answer)).to eq(encoded_answer)
   end
 
   it "31. If index.html is being tracked and you modify and stage the change,
       what color will it be if you run 'git status'?" do
-    answer = "?"
+    answer = "green"
     encoded_answer = "bc74f4f071a5a33f00ab88a6d6385b5e6638b86c"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -247,7 +247,7 @@ describe "GIT" do
      assuming no one has pushed to your remote since you cloned it, will 'git status' say
      you're ahead or behind origin/master?" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "?"
+    answer = "ahead"
     encoded_answer = "a7481340412e5d73e6c5c8de4ef9285b85502d5a"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -256,7 +256,7 @@ describe "GIT" do
       someone else pushes two commits to it, will 'git status' say you are ahead or 
       behind when you run it at 12:05pm" do
     # "ahead" or "behind" or "ahead and behind"
-    answer = "?"
+    answer = "behind"
     encoded_answer = "fb6dbd81382d78f0f0633759a9c6033858e445b5"
     expect(encode(answer)).to eq(encoded_answer)
   end
